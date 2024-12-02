@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login dan Kalkulator Kalori</title>
+    <title>Login Kalori</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/form_login.css">
 </head>
@@ -20,31 +20,43 @@
                 <div class="mb-6 flex items-baseline gap-4">
                     <a href="index.html" class="text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 text-current" fill="currentColor">
-                            <path d="M48 416c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320zm16 64c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z"/>
+                            <path d="M48 416c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v320zM64 480c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22v208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
                         </svg>
                     </a>
                     <h1 class="text-3xl font-bold">Login</h1>
                 </div>
                 <!-- Title -->
                 <h2 class="text-xl mb-6 flex justify-start">Masukkan Akun Anda Disini!</h2>
-                
                 <!-- Login Form -->
                 <form id="login-form" class="space-y-4">
                     <div>
-                        <input type="text" placeholder="Username" id="username" 
-                               class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <input type="text" placeholder="Username" id="username" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
                     </div>
                     <div>
-                        <input type="password" placeholder="Password" id="password" 
-                               class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <input type="password" placeholder="Password" id="password" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
                     </div>
                     <div class="flex justify-center items-center g-recaptcha" data-sitekey="6LeTvI8qAAAAAA0f2hQ8ZeHlss68qJ8plxtsguln"></div>
                     <button type="button" id="login-btn" class="w-full py-3 bg-yellow-400 text-[#16223A] font-bold rounded-lg hover:bg-yellow-500 transition">LOGIN</button>
                 </form>
-                 <!-- Background Image Section -->
-                <div class="hidden md:block w-3/5 bg-cover bg-center relative" style="background-image: url('https://asset.kompas.com/crops/5IKtAG1WEcgXPjVZnaiSghPW-Pk=/0x0:6915x4610/750x500/data/photo/2022/11/25/63801331b86d1.jpg');">
-                    <div class="absolute inset-0 bg-black opacity-30"></div>
+                <!-- Remember Me & Forgot Password -->
+                <div class="flex justify-between items-center text-sm mt-4">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="text-yellow-400 focus:ring-0 rounded">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="text-yellow-400 hover:underline">Forgot password?</a>
+                </div>
+                <!-- Sign Up Link -->
+                <p class="mt-6 text-center text-sm text-white-600">
+                    Apakah anda belum mempunyai akun? 
+                    <a href="register.html" class="text-green-500 hover:underline">Register</a>
+                </p>
             </div>
+        </div>
+
+        <!-- Background Image Section -->
+        <div class="hidden md:block w-3/5 bg-cover bg-center relative" style="background-image: url('https://d324bm9stwnv8c.cloudfront.net/4-jenis-makanan-sehat-untuk-sambut-tahun-baru-2019-Halodoc.jpg');">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
         </div>
     </div>
     <script src="js/form_login.js"></script>
