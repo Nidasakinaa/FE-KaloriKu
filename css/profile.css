@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #6c757d;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    color: #343a40;
+}
+
+/* Spinner Styles */
+#spinner {
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar Styles */
+.navbar-brand h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #6c757d;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Profile Section */
+section {
+    margin-top: 100px;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+/* Order History Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+td {
+    color: #343a40;
+}
+
+/* Footer Styles */
+.footer {
+    color: #adb5bd;
+}
+
+.footer .btn-outline-light {
+    color: #fff;
+    border-color: #adb5bd;
+}
+
+.footer .btn-outline-light:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+}

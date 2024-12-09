@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KaloriKu - Organic Food Website Template</title>
+    <title>KaloriKu - Makan Sehat tanpa Ribet!</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -28,7 +28,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../FE-KaloriKu/css/profile.css" rel="stylesheet">
 </head>
 
 <body>
@@ -71,6 +71,8 @@
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <!-- Login Link -->
+                    <a href="form_login.html" class="nav-item nav-link">Login</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
@@ -79,7 +81,7 @@
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-user text-body"></small>
                     </a>
-                    <a href="chart.html" class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-shopping-bag text-body"></small>
                     </a>
                 </div>
@@ -88,68 +90,94 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Features</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-dark active" aria-current="page">Features</li>
-                </ol>
-            </nav>
+    <!-- Profile Section -->
+  <section class="container mx-auto mt-10">
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <!-- User Information -->
+      <div class="flex items-center space-x-6">
+        <img class="w-24 h-24 rounded-full shadow-md" src="https://via.placeholder.com/100" alt="User Profile Picture">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-800">John Doe</h1>
+          <p class="text-gray-500">johndoe@example.com</p>
+          <p class="text-gray-500">+62 812-3456-7890</p>
         </div>
-    </div>
-    <!-- Page Header End -->
+      </div>
 
+      <!-- Personal Information -->
+      <div class="mt-8">
+        <h2 class="text-xl font-semibold text-gray-700">Personal Information</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-600">Full Name</label>
+            <input type="text" class="w-full p-2 border rounded-md" value="John Doe" readonly>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-600">Email Address</label>
+            <input type="email" class="w-full p-2 border rounded-md" value="johndoe@example.com" readonly>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-600">Phone Number</label>
+            <input type="text" class="w-full p-2 border rounded-md" value="+62 812-3456-7890" readonly>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-600">Address</label>
+            <input type="text" class="w-full p-2 border rounded-md" value="123 Healthy Street, Jakarta" readonly>
+          </div>
+        </div>
+      </div>
 
-    <!-- Feature Start -->
-    <div class="container-fluid bg-light bg-icon py-6">
-        <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3">Our Features</h1>
-                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                        <h4 class="mb-3">Natural Process</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                        <h4 class="mb-3">Organic Products</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div>
-                </div>
+        <!-- Order History -->
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-700">Order History</h2>
+            <div class="overflow-x-auto mt-4">
+            <table class="min-w-full bg-white border rounded-lg shadow-md">
+                <thead>
+                <tr>
+                    <th class="px-6 py-3 border-b text-left text-sm font-medium text-gray-500 uppercase">Order ID</th>
+                    <th class="px-6 py-3 border-b text-left text-sm font-medium text-gray-500 uppercase">Date</th>
+                    <th class="px-6 py-3 border-b text-left text-sm font-medium text-gray-500 uppercase">Total</th>
+                    <th class="px-6 py-3 border-b text-left text-sm font-medium text-gray-500 uppercase">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">#1001</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">01 Dec 2024</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">Rp 150,000</td>
+                    <td class="px-6 py-4 border-b text-sm text-green-600">Completed</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">#1002</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">25 Nov 2024</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">Rp 200,000</td>
+                    <td class="px-6 py-4 border-b text-sm text-orange-500">Pending</td>
+                </tr>
+                <tr>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">#1003</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">10 Nov 2024</td>
+                    <td class="px-6 py-4 border-b text-sm text-gray-700">Rp 120,000</td>
+                    <td class="px-6 py-4 border-b text-sm text-red-500">Cancelled</td>
+                </tr>
+                </tbody>
+            </table>
             </div>
         </div>
-    </div>
-    <!-- Feature End -->
-
+        </div>
+    </section>
+        <!-- Profile Section End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
+<<<<<<< HEAD:profile.html
+                    <h1 class="fw-bold text-primary mb-4">Kal<span class="text-secondary">o</span>riKu</h1>
+                    <p>Makan sehat tanpa Ribet!</p>
+=======
                     <h1 class="fw-bold text-primary mb-4">kal<span class="text-secondary">o</span>riKu</h1>
                     <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+>>>>>>> f3ce9769bb1cffddcc734872862d316567c6a3eb:feature.html
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -159,7 +187,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Jalan Sari Asih No. 54, Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
                 </div>
@@ -198,7 +226,6 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -213,6 +240,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+    <script src="js/profile.js"></script>
+    </body>
 </html>
