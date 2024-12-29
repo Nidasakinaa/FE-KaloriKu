@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-4xl {
+    font-size: 2.5rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4c51bf;
+    outline: none;
+    box-shadow: 0 0 4px rgba(76, 81, 191, 0.5);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button {
+    background-color: #4c51bf;
+    color: white;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a67d8;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Margin and Padding Adjustments */
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.space-y-6 > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+

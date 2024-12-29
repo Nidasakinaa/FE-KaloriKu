@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,68 +8,60 @@
     <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <div class="flex min-h-screen">
-        <!-- Register Form Section -->
-        <div class="w-full md:w-2/5 flex justify-center items-center bg-[#16223A] text-whitef">
-            <div class="max-w-md w-full px-8 py-6 shadow-lg">
 
-                <!-- Logo -->
-                <div class="mb-6 text-center flex items-baseline gap-4">
-                    <a href="../index.html" class="text-white">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                            class="w-5 h-5 text-current"
-                            fill="currentColor">
-                            <path d="M48 416c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320zm16 64c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z"/>
-                        </svg>
-                     </a>
-                    <h1 class="text-3xl font-bold text-white">Register</h1>
-                </div>
-                <!-- Welcome Text -->
-                <p class="text-white mb-6">Daftar dengan data diri Anda di bawah ini.</p>
-                <!-- Form -->
-                <form action="#" class="space-y-4">
-                    <!-- Full Name -->
-                    <div>
-                        <label for="name" class="block text-white">Full Name</label>
-                        <input type="text" id="name" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
-                    </div>
-                    <!-- Email -->
-                    <div>
-                        <label for="email" class="block text-white">Email</label>
-                        <input type="email" id="email" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
-                    </div>
-                    <!-- Password -->
-                    <div>
-                        <label for="password" class="block text-white">Password</label>
-                        <input type="password" id="password" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
-                    </div>
-                    <!-- Confirm Password -->
-                    <div>
-                        <label for="confirm-password" class="block text-white">Confirm Password</label>
-                        <input type="password" id="confirm-password" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
-                    </div>
-                    <!-- Terms & Privacy -->
-                    <div class="flex items-center space-x-2 text-sm">
-                        <input type="checkbox" class="text-white rounded focus:ring-0" required>
-                        <span class="text-white">I agree to the <a href="#" class="text-white hover:underline">Terms & Privacy</a></span>
-                    </div>
-                    
-                    <!-- Sign Up Button -->
-                    <button type="submit" class="w-full py-3 bg-yellow-400 rounded-lg font-bold text-[#16223A]">Sign Up</button>
-                </form>
-                <!-- Login Link in Register Page -->
-                <p class="mt-6 text-center text-sm text-white">Sudah punya akun? <a href="form_login.html" class="text-green-700 hover:underline">Login</a></p>
+<body class="bg-gray-100 min-h-screen bg-cover bg-center relative" style="background-image: url('/img/Pt5.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-2 bg-white bg-opacity-20"></div>
 
+    <!-- Register Form -->
+    <div class="flex min-h-screen justify-center items-center relative z-10">
+        <div class="max-w-md w-full px-8 py-6 bg-black bg-opacity-30 shadow-lg rounded-lg">
+            <!-- Logo -->
+            <div class="mb-6 text-center flex items-baseline gap-4">
+                <a href="../index.html" class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 text-current" fill="currentColor">
+                        <path d="M48 416c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80c-8.8 0-16 7.2-16 16l0 320zm16 64c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
+                    </svg>
+                </a>
+                <h1 class="text-3xl font-bold text-white">Register</h1>
             </div>
-        </div>
+            <!-- Welcome Text -->
+            <p class="text-white mb-6">Daftar dengan data diri Anda di bawah ini.</p>
+            <!-- Form -->
+            <form action="#" class="space-y-4">
+                <!-- Full Name -->
+                <div>
+                    <label for="name" class="block text-blue-900 font-bold">Full Name</label>
+                    <input type="text" id="name" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                </div>
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-blue-900 font-bold">Email</label>
+                    <input type="email" id="email" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                </div>
+                <!-- Password -->
+                <div>
+                    <label for="password" class="block text-blue-900 font-bold">Password</label>
+                    <input type="password" id="password" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                </div>
+                <!-- Confirm Password -->
+                <div>
+                    <label for="confirm-password" class="block text-blue-900 font-bold">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="" required class="w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                </div>
+                <!-- Terms & Privacy -->
+                <div class="flex items-center space-x-2 text-sm">
+                    <input type="checkbox" class="text-white rounded focus:ring-0" required>
+                    <span class="text-white font-bold">I agree to the <a href="#" class="text-yellow-400 font-semibold :underline">Terms & Privacy</a></span>
+                </div>
 
-        <!-- Background Image Section -->
-        <div class="hidden md:block w-3/5 bg-cover bg-center" style="background-image: url('https://d324bm9stwnv8c.cloudfront.net/4-jenis-makanan-sehat-untuk-sambut-tahun-baru-2019-Halodoc.jpg');">
+                <!-- Sign Up Button -->
+                <button type="submit" class="w-full py-3 bg-green-500  rounded-lg font-bold text-[#16223A]">Sign Up</button>
+            </form>
+            <!-- Login Link in Register Page -->
+            <p class="mt-6 text-center text-sm text-white font-semibold">Sudah punya akun? <a href="form_login.html" class="text-yellow-400 hover:underline">Login</a></p>
         </div>
     </div>
-    <script src="js/register.js"></script>
 </body>
+
 </html>

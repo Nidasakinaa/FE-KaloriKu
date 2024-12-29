@@ -11,52 +11,48 @@
     <link rel="stylesheet" href="css/form_login.css">
 </head>
 
-<body class="bg-gray-100">
-    <div class="flex min-h-screen">
-        <!-- Login Section -->
-        <div class="w-full md:w-3/6 flex justify-center items-center bg-[#16223A] text-white">
-            <div class="max-w-sm w-full text-center">
-                <!-- Logo -->
-                <div class="mb-6 flex items-baseline gap-4">
-                    <a href="index.html" class="text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 text-current" fill="currentColor">
-                            <path d="M48 416c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v320zM64 480c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22v208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
-                        </svg>
-                    </a>
-                    <h1 class="text-3xl font-bold">Login</h1>
-                </div>
-                <!-- Title -->
-                <h2 class="text-xl mb-6 flex justify-start">Masukkan Akun Anda Disini!</h2>
-                <!-- Login Form -->
-                <form id="login-form" class="space-y-4">
-                    <div>
-                        <input type="text" placeholder="Email" id="username" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                    </div>
-                    <div>
-                        <input type="password" placeholder="Password" id="password" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
-                    </div>
-                    <div class="flex justify-center items-center g-recaptcha" data-sitekey="6LeTvI8qAAAAAA0f2hQ8ZeHlss68qJ8plxtsguln"></div>
-                    <button type="button" id="login-btn" class="w-full py-3 bg-yellow-400 text-[#16223A] font-bold rounded-lg hover:bg-yellow-500 transition">LOGIN</button>
-                </form>
-                <!-- Remember Me & Forgot Password -->
-                <div class="flex justify-between items-center text-sm mt-4">
-                    <label class="flex items-center space-x-2">
-                        <input type="checkbox" class="text-yellow-400 focus:ring-0 rounded">
-                        <span>Remember me</span>
-                    </label>
-                    <a href="#" class="text-yellow-400 hover:underline">Forgot password?</a>
-                </div>
-                <!-- Sign Up Link -->
-                <p class="mt-6 text-center text-sm text-white-600">
-                    Apakah anda belum mempunyai akun? 
-                    <a href="register.html" class="text-green-500 hover:underline">Register</a>
-                </p>
-            </div>
-        </div>
+<body class="bg-gray-200 min-h-screen bg-cover bg-center relative" style="background-image: url('/img/Pt5.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-2 bg-white bg-opacity-20"></div>
 
-        <!-- Background Image Section -->
-        <div class="hidden md:block w-3/5 bg-cover bg-center relative" style="background-image: url('https://d324bm9stwnv8c.cloudfront.net/4-jenis-makanan-sehat-untuk-sambut-tahun-baru-2019-Halodoc.jpg');">
-            <div class="absolute inset-0 bg-black opacity-30"></div>
+    <!-- Login Form -->
+    <div class="flex min-h-screen justify-center items-center relative z-10">
+        <div class="max-w-sm w-full text-center bg-black bg-opacity-30 p-6 rounded-lg">
+            <!-- Logo -->
+            <div class="mb-6 flex items-baseline gap-4">
+                <a href="/index.html" class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5 text-current" fill="currentColor">
+                        <path d="M48 416c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16v320zM64 480c-35.3 0-64-28.7-64-64V96c0-35.3 28.7-64 64-64h320c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64zm64-224c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22v208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
+                    </svg>
+                </a>
+                <h1 class="text-3xl font-bold text-white ">Login</h1>
+            </div>
+            <!-- Title -->
+            <h2 class="text-xl mb-8 flex justify-start text-white">Masukkan Akun Anda Disini!</h2>
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <input type="text" placeholder="Email" id="username" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" id="password" class="w-full px-4 py-3 bg-gray-200 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                </div>
+                <div class="flex justify-center items-center g-recaptcha" data-sitekey="6LeTvI8qAAAAAA0f2hQ8ZeHlss68qJ8plxtsguln"></div>
+                <button type="button" id="login-btn" class="w-full py-3 bg-green-500 text-[#16223A] font-bold rounded-lg hover:bg-green-600 transition">LOGIN</button>
+            </form>
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex justify-between items-center text-sm mt-4 text-yellow-400 font-semibold font-bold">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" class="text-yellow-400 focus:ring-0 rounded">
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="text-blue-900 font-bold hover:underline">Forgot password?</a>
+            </div>
+            <!-- Sign Up Link -->
+            <p class="mt-6 text-center text-sm text-white font-semibold">
+                Apakah anda belum mempunyai akun? 
+                <a href="register.html" class="text-yellow-400 font-semibold hover:underline">Register</a>
+            </p>
         </div>
     </div>
     <script src="js/form_login.js"></script>
