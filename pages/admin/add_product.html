@@ -8,23 +8,15 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script type="module" src="/js/controller/post.js"></script>
+
 </head>
 
 <body>
@@ -51,13 +43,13 @@
                     <h2 class="mb-4 text-center">Product Details</h2>
                     <form action="/admin/save_product.html" method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-light">
                         <div class="mb-3">
-                            <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name" required>
+                            <label for="name" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter product name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="price" class="form-label">Price</label>
-                            <input type="number" class="form-control" id="price" name="price" placeholder="Enter price (in Rp)" required>
-                        </div>
+                          <label for="price" class="form-label">Price</label>
+                          <input type="text" class="form-control" id="price" name="price" placeholder="Enter price (in Rp)" required oninput="formatRupiah(this)">
+                      </div>
                         <div class="mb-3">
                             <label for="stock" class="form-label">Stock</label>
                             <input type="number" class="form-control" id="stock" name="stock" placeholder="Enter stock quantity" required>
@@ -77,12 +69,10 @@
                             <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter product description" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="productImage" class="form-label">Product Image</label>
-                            <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*" required>
+                            <label for="image" class="form-label">Product Image</label>
+                            <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary px-4">Add Product</button>
-                        </div>
+                        <button id="submitButton" type="button" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
             </div>
@@ -123,7 +113,27 @@
     <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="/js/main.js"></script>
-</body>
+    <script>
+      function formatRupiah(input) {
+          // Menghapus semua karakter yang bukan angka
+          let value = input.value.replace(/[^,\d]/g, '').toString();
+          let split = value.split(',');
+          let remainder = split[0].length % 3;
+          let rupiah = split[0].substr(0, remainder);
+          let thousand = split[0].substr(remainder).match(/\d{3}/gi);
+          
+          // Menambahkan titik setiap 3 angka
+          if (thousand) {
+              let separator = remainder ? '.' : '';
+              rupiah += separator + thousand.join('.');
+          }
+          
+          // Menambahkan sisa desimal jika ada
+          rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
+          
+          input.value = rupiah;
+      }
+    </script>
+  </body>
 
 </html>

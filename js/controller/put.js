@@ -11,35 +11,28 @@ function validateInput(value, fieldName) {
 }
 
 function pushData() {
-    let pasienName = getValue("pasienName");
-    let gender = getValue("gender");
-    let usia = getValue("usia");
-    let phonenumber = getValue("phonenumber");
-    let alamat = getValue("alamat");
-    let doctorName = getValue("doctorName");
-    let diagnosis = getValue("diagnosis");
+    let name = getValue("name");
+    let description = getValue("description");
+    let price = getValue("price");
+    let category = getValue("category");
+    let image = getValue("image");
+    let stock = getValue("stock");
 
     if (
-        validateInput(pasienName, "Patient Name") &&
-        validateInput(gender, "Gender") &&
-        validateInput(usia, "Age") &&
-        validateInput(phonenumber, "Phone Number") &&
-        validateInput(alamat, "Address") &&
-        validateInput(doctorName, "Doctor Name") &&
-        validateInput(diagnosis, "Diagnosis")
+        validateInput(name, "Name") &&
+        validateInput(description, "Description") &&
+        validateInput(price, "Price") &&
+        validateInput(category, "Category") &&
+        validateInput(image, "Image") &&
+        validateInput(stock, "Stock") 
     ) {
         let data = {
-            pasienName: pasienName,
-            gender: gender,
-            usia: usia,
-            phonenumber: phonenumber,
-            alamat: alamat,
-            doctor: {
-                name: doctorName,
-            },
-            medicalRecord: {
-                diagnosis: diagnosis,
-            }
+            name: name,
+            description: description,
+            price: price,
+            category: category,            
+            image: image,
+            stock: stock,
         };
         putData(urlPUT, data, AmbilResponse);
     }

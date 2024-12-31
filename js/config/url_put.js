@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const pasienId = urlParams.get('pasienId');
+const menuItemId = urlParams.get('menuItemId');
 
-export let urlPUT = "https://ws-rumahsakit-2e1eb71f14e2.herokuapp.com/update/" + pasienId;
+export let urlPUT = "https://kaloriku-d9941de09573.herokuapp.com/update/" + menuItemId;
 
 export function AmbilResponse(result) {
     console.log(result);

@@ -5,8 +5,8 @@ function confirmDelete(IDHAPUS) {
 }
 
 function deleteData(IDHAPUS) {
-    var pasienId = IDHAPUS;
-    var target_url = "https://ws-rumahsakit-2e1eb71f14e2.herokuapp.com/delete/" + pasienId;
+    var menuItemId = IDHAPUS;
+    var target_url = "https://kaloriku-d9941de09573.herokuapp.com/delete/" + menuItemId;
 
     var requestOptions = {
         method: 'DELETE',

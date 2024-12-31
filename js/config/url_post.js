@@ -1,4 +1,4 @@
-export let urlPOST = "https://ws-rumahsakit-2e1eb71f14e2.herokuapp.com/insert"
+export let urlPOST = "https://kaloriku-d9941de09573.herokuapp.com/insert"
 
 export function AmbilResponse(result) {
     console.log(result); 

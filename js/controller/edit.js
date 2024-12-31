@@ -1,12 +1,11 @@
 export function isiData(results) {  
   const inputMapping = [
-      { id: 'pasienName', path: 'pasienName' },
-      { id: 'gender', path: 'gender' },
-      { id: 'usia', path: 'usia' },
-      { id: 'phonenumber', path: 'phonenumber' },
-      { id: 'alamat', path: 'alamat' },
-      { id: 'doctorName', path: 'doctor.name' },
-      { id: 'diagnosis', path: 'medicalRecord.diagnosis' }
+      { id: 'name', path: 'name' },
+      { id: 'description', path: 'description' },
+      { id: 'price', path: 'price' },
+      { id: 'category', path: 'category' },
+      { id: 'image', path: 'image' }
+      { id: 'stock', path: 'stock' }
   ];
 
   inputMapping.forEach(({ id, path }) => {

@@ -21,10 +21,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,16 +51,12 @@
                     <h2 class="mb-4 text-center">Edit Product Details</h2>
                     <form action="/admin/update_product.html" method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-light">
                         <div class="mb-3">
-                            <label for="productName" class="form-label">Product Name</label>
+                            <label for="name" class="form-label">Product Name</label>
                             <input type="text" class="form-control" id="productName" name="productName" value="Sample Product" required>
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Price</label>
                             <input type="number" class="form-control" id="price" name="price" value="100000" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="stock" class="form-label">Stock</label>
-                            <input type="number" class="form-control" id="stock" name="stock" value="50" required>
                         </div>
                         <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
@@ -76,12 +72,16 @@
                             <textarea class="form-control" id="description" name="description" rows="4" required>Sample product description.</textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="productImage" class="form-label">Product Image</label>
+                            <label for="image" class="form-label">Product Image</label>
                             <input type="file" class="form-control" id="productImage" name="productImage" accept="image/*">
                             <small class="text-muted">Leave blank if no changes to the image.</small>
                         </div>
+                        <div class="mb-3">
+                          <label for="stock" class="form-label">Stock</label>
+                          <input type="number" class="form-control" id="stock" name="stock" value="50" required>
+                        </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary px-4">Update Product</button>
+                            <button id="submitButton" type="button" class="btn btn-primary px-4">Update Product</button>
                         </div>
                     </form>
                 </div>
@@ -124,6 +124,8 @@
 
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
+    <script type="module" src="../js/fetch_edit.js"></script>
+    <script type="module" src="../js/controller/put.js"></script>
 </body>
 
 </html>
