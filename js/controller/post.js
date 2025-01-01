@@ -11,6 +11,7 @@ function validateInput(value, fieldName) {
 }
 
 function pushData() {
+    
     let name = getValue("name");
     let description = getValue("description");
     let price = getValue("price");
