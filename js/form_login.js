@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (username && password) {
             // Login berhasil (bisa ditambahkan autentikasi lebih lanjut di sini)
             alert(`Welcome, ${username}!`);
-            window.location.href =6"index.html"; // Ganti URL sesuai dengan halaman tujuan
+            // Redirect after login success
+            window.location.href = "home.html";  // Ganti URL sesuai dengan halaman index Anda
         } else {
             // Tampilkan pesan error jika input kosong
             alert("Please fill in both username and password!");
