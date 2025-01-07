@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (username && password) {
             alert(`Welcome, ${username}!`);
             // Redirect after login success
-            window.location.href = "index.html";  // Ganti URL sesuai dengan halaman index Anda
+            window.location.href = "home.html";  // Ganti URL sesuai dengan halaman index Anda
         } else {
             alert("Please fill in both username and password!");
         }
