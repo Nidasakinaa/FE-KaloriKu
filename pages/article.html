@@ -12,7 +12,7 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!--Tailwind CSS-->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +24,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/article.css" rel="stylesheet">
 </head>
 
 <body>
@@ -85,56 +86,36 @@
     <!-- Page Header End -->
 
     <!-- Artikel Section -->
-    <section class="container mx-auto my-10 px-4">
-        <h2 class="text-3xl font-bold mb-6 text-center">Artikel Terbaru</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="artikel-section">
+        <h2 id="artikel-title">Artikel Terbaru</h2>
+        <div id="artikel-grid">
             <!-- Kartu Artikel 1 -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9yZWIaQYFVdebWZV_ty_bWh-sNu9zkfhTtQ&s" alt="Artikel 1" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="card-title">Tips Jalani Diet dan Gaya Hidup Sehat yang Konsisten</h3>
-                    <p class="card-description">Menjaga konsistensi dalam diet dan gaya hidup sehat adalah kunci untuk mencapai kesehatan optimal.</p>
-                    <a href="https://lifestyle.kompas.com/read/2023/03/01/191121020/tips-jalani-diet-dan-gaya-hidup-sehat-yang-konsisten?page=all" class="card-link">Baca selengkapnya</a>
+            <div class="artikel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9yZWIaQYFVdebWZV_ty_bWh-sNu9zkfhTtQ&s" alt="Artikel 1" class="artikel-img">
+                <div class="artikel-content">
+                    <h3 class="artikel-card-title">Tips Jalani Diet dan Gaya Hidup Sehat yang Konsisten</h3>
+                    <p class="artikel-card-description">Menjaga konsistensi dalam diet dan gaya hidup sehat adalah kunci untuk mencapai kesehatan optimal.</p>
+                    <a href="https://lifestyle.kompas.com/read/2023/03/01/191121020/tips-jalani-diet-dan-gaya-hidup-sehat-yang-konsisten?page=all" class="artikel-card-link">Baca selengkapnya</a>
                 </div>
             </div>
 
             <!-- Kartu Artikel 2 -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7LLwJ6N-MTYdBKkYI0Yl0hEiJ9WV2tb2L5w&s" alt="Artikel 2" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="card-title">10 Tips Diet untuk Menurunkan Berat Badan yang Aman & Sehat</h3>
-                    <p class="card-description">Strategi menurunkan berat badan dengan cara aman dan sehat.</p>
-                    <a href="https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan" class="card-link">Baca selengkapnya</a>
+            <div class="artikel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7LLwJ6N-MTYdBKkYI0Yl0hEiJ9WV2tb2L5w&s" alt="Artikel 2" class="artikel-img">
+                <div class="artikel-content">
+                    <h3 class="artikel-card-title">10 Tips Diet untuk Menurunkan Berat Badan yang Aman & Sehat</h3>
+                    <p class="artikel-card-description">Strategi menurunkan berat badan dengan cara aman dan sehat.</p>
+                    <a href="https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan" class="artikel-card-link">Baca selengkapnya</a>
                 </div>
             </div>
 
             <!-- Kartu Artikel 3 -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.pexels.com/photos/6696197/pexels-photo-6696197.jpeg" alt="Artikel 3" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="card-title">Mengatur Pola Hidup Sehat Dengan Diet</h3>
-                    <p class="card-description">Pola hidup sehat dimulai dari pola makan dan nutrisi yang tepat.</p>
-                    <a href="https://acehprov.go.id/berita/kategori/serba-serbi/46-mengatur-pola-hidup-sehat-dengan-diet" class="card-link">Baca selengkapnya</a>
-                </div>
-            </div>
-
-            <!-- Kartu Artikel 4 -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.pexels.com/photos/1608999/pexels-photo-1608999.jpeg" alt="Artikel 4" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="card-title">Tips Diet Sehat dan Bugar Menurut Dokter Gizi</h3>
-                    <p class="card-description">Panduan diet sehat dari perspektif dokter gizi profesional.</p>
-                    <a href="https://www.mitrakeluarga.com/artikel/tips-diet-sehat" class="card-link">Baca selengkapnya</a>
-                </div>
-            </div>
-
-            <!-- Kartu Artikel 5 -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <img src="https://images.pexels.com/photos/2698513/pexels-photo-2698513.jpeg" alt="Artikel 5" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="card-title">Diet Sehat, Ketahui Pengertian dan Aturan Tepatnya</h3>
-                    <p class="card-description">Diet sehat bukan hanya soal menurunkan berat badan, tetapi keseimbangan nutrisi.</p>
-                    <a href="https://hellosehat.com/nutrisi/diet/apa-itu-diet-sehat/" class="card-link">Baca selengkapnya</a>
+            <div class="artikel-card">
+                <img src="https://images.pexels.com/photos/6696197/pexels-photo-6696197.jpeg" alt="Artikel 3" class="artikel-img">
+                <div class="artikel-content">
+                    <h3 class="artikel-card-title">Mengatur Pola Hidup Sehat Dengan Diet</h3>
+                    <p class="artikel-card-description">Pola hidup sehat dimulai dari pola makan dan nutrisi yang tepat.</p>
+                    <a href="https://acehprov.go.id/berita/kategori/serba-serbi/46-mengatur-pola-hidup-sehat-dengan-diet" class="artikel-card-link">Baca selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -185,10 +166,10 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
