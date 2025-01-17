@@ -13,26 +13,20 @@ function validateInput(value, fieldName) {
 function pushData() {
     let name = getValue("name");
     let description = getValue("description");
-    let price = getValue("price");
     let category = getValue("category");
     let image = getValue("image");
-    let stock = getValue("stock");
 
     if (
         validateInput(name, "Name") &&
         validateInput(description, "Description") &&
-        validateInput(price, "Price") &&
         validateInput(category, "Category") &&
-        validateInput(image, "Image") &&
-        validateInput(stock, "Stock") 
+        validateInput(image, "Image") 
     ) {
         let data = {
             name: name,
             description: description,
-            price: price,
             category: category,            
             image: image,
-            stock: stock,
         };
         putData(urlPUT, data, AmbilResponse);
     }

@@ -2,10 +2,8 @@ export function isiData(results) {
   const inputMapping = [
       { id: 'name', path: 'name' },
       { id: 'description', path: 'description' },
-      { id: 'price', path: 'price' },
       { id: 'category', path: 'category' },
       { id: 'image', path: 'image' }
-      { id: 'stock', path: 'stock' }
   ];
 
   inputMapping.forEach(({ id, path }) => {

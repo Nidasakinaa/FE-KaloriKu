@@ -10,10 +10,8 @@ function isiRow(value) {
             .replace("#ID#", value._id)
             .replace("#NAMA#", value.name ? value.name : "Nama Menu tidak tersedia")
             .replace("#DESKRIPSI#", value.description ? value.description : "Deskripsi tidak tersedia")
-            .replace("#HARGA#", value.usia ?  `${value.price} price` : "Harga tidak tersedia")
             .replace("#KATEGORI#", value.category ? value.category : "Kategori tidak tersedia")
             .replace("#FOTO#", value.image ? value.image : "Foto tidak tersedia")
-            .replace("#STOK#", value.stock ? value.stock : "Stock tidak tersedia")
             .replace("#IDEDIT#", value._id)
             .replace("#IDHAPUS#", value._id);
     addInner("iniTabel", content);

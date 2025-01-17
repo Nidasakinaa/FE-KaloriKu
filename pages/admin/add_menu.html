@@ -10,9 +10,16 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="/css/style.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- Script js-->
+    <script type="module" src="/js/controller/post.js"></script>
 </head>
 
 <body>
@@ -44,51 +51,51 @@
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Add Menu</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a class="text-body" href="/index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-body" href="">Pages</a></li>
-                    <li class="breadcrumb-item text-dark active" aria-current="page">Add Menu</li>
-                </ol>
-            </nav>
+    <header class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4 text-primary mb-3">Tambah Menu Baru</h1>
+            <p class="lead text-muted">Tambah menu sehat Anda dengan kategori yang relevan dan deskripsi lengkap.</p>
         </div>
-    </div>
+    </header>
     <!-- Page Header End -->
 
-    <!-- Product Form Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <h2 class="mb-4 text-center">Product Details</h2>
-                    <form action="/admin/save_product.html" method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-light">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Menu Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter product name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="category" class="form-label">Category</label>
-                            <select class="form-select" id="category" name="category" required>
-                                <option value="" selected disabled>Select category</option>
-                                <option value="Vegetable">Vegetable</option>
-                                <option value="Fruit">Fruit</option>
-                                <option value="Dairy">Dairy</option>
-                                <option value="Meat">Meat</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter product description" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="image" class="form-label">Product Image</label>
-                            <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
-                        </div>
-                        <button id="submitButton" type="button" class="btn btn-primary">Simpan</button>
-                    </form>
+     <!-- Product Form Start -->
+     <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h3 class="card-title text-center text-primary mb-4">Form Tambah Menu</h3>
+                        <form id="menuInsertForm">
+                            <div class="form-group mb-3">
+                                <label for="name" class="form-label">Nama Menu</label>
+                                <input id="name" type="text" class="form-control" name="menuName" placeholder="Masukkan nama menu" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="description" class="form-label">Deskripsi</label>
+                                <textarea id="description" class="form-control" name="description" rows="3" placeholder="Masukkan deskripsi menu" required></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="category" class="form-label">Kategori</label>
+                                <select id="category" class="form-control" name="category" required>
+                                    <option hidden>Pilih Kategori</option>
+                                    <option value="Diet">Diet</option>
+                                    <option value="Vegan">Vegan</option>
+                                    <option value="HighProtein">High Protein</option>
+                                    <option value="Snacks">Snacks</option>
+                                </select>
+                            </div>
+                            <!-- <div class="form-group mb-3">
+                                <label for="image" class="form-label">Foto Menu</label>
+                                <input type="file" id="image" class="form-control" name="photo" accept="image/*" required>
+                            </div> -->
+                            <div class="text-center">
+                                <button type="button" id="submitButton" class="btn btn-primary w-50">
+                                    <i class="fas fa-save"></i> Simpan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,30 +132,7 @@
     <script src="/lib/wow/wow.min.js"></script>
     <script src="/lib/easing/easing.min.js"></script>
     <script src="/lib/waypoints/waypoints.min.js"></script>
-    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script>
-      function formatRupiah(input) {
-          // Menghapus semua karakter yang bukan angka
-          let value = input.value.replace(/[^,\d]/g, '').toString();
-          let split = value.split(',');
-          let remainder = split[0].length % 3;
-          let rupiah = split[0].substr(0, remainder);
-          let thousand = split[0].substr(remainder).match(/\d{3}/gi);
-          
-          // Menambahkan titik setiap 3 angka
-          if (thousand) {
-              let separator = remainder ? '.' : '';
-              rupiah += separator + thousand.join('.');
-          }
-          
-          // Menambahkan sisa desimal jika ada
-          rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
-          
-          input.value = rupiah;
-      }
-    </script>
     <!-- JavaScript Libraries -->
     <script type="module" src="/js/controller/post.js"></script>
 

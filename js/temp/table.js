@@ -4,10 +4,8 @@ export let isiTabel =
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#ID#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#NAMA#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#DESKRIPSI#</th>
-    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#HARGA#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#KATEGORI#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#FOTO#</th>
-    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#STOK#</th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
         <button type="button" class="btn btn-link p-0" onclick="window.location.href='edit.html?menuItemId=#IDEDIT#'"> Edit </button>
         |
